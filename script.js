@@ -34,7 +34,10 @@ if (contactForm && formStatus) {
     const data = new FormData(contactForm);
     const name = data.get("name")?.toString().trim() || "Visitor";
     const message = data.get("message")?.toString().trim() || "";
-    formStatus.textContent = `Message prepared for ${name}: ${message}`;
+    const whatsappMessage = `Hello Aditi, my name is ${name}.\n\n${message}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=917058941803&text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, "_blank", "noopener");
+    formStatus.textContent = "WhatsApp opened with your message ready to send.";
   });
 }
 
