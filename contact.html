@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Aditi Shinde</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-mark">AS</span><span>Aditi P. Shinde</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">CV Details</a>
+        <a href="projects.html">Projects</a>
+        <a href="ai-features.html">AI Features</a>
+        <a href="video-editing.html">Creative</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="page-hero contact-hero">
+        <p class="eyebrow">Contact</p>
+        <h1>Contact Me</h1>
+        <p>Reach out for opportunities, internships, project discussions, collaborations, or video portfolio work.</p>
+      </section>
+
+      <section class="section two-column">
+        <article class="contact-panel">
+          <h2>Contact Details</h2>
+          <div class="contact-item">
+            <h3>Email</h3>
+            <a href="mailto:shindeaditi0106@gmail.com">shindeaditi0106@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <h3>Phone</h3>
+            <a href="tel:+917058941803">+91 7058941803</a>
+          </div>
+          <div class="contact-item">
+            <h3>Location</h3>
+            <p>Nehru Nagar, Pune-18, Maharashtra</p>
+          </div>
+          <div class="contact-item">
+            <h3>Future profile links</h3>
+            <p>LinkedIn, GitHub, hosted projects, and video portfolio links can be added here after sharing the URLs.</p>
+          </div>
+        </article>
+
+        <form class="contact-form" id="contact-form">
+          <h2>Prepare a Message</h2>
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" placeholder="Write a short message" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Prepare Message</button>
+          <p id="form-status" class="form-status" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>This frontend form prepares text locally and does not send data to a server.</p>
+      <a href="index.html">Home</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Features | Aditi Prashant Shinde</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-mark">AS</span><span>Aditi P. Shinde</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">CV Details</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" href="ai-features.html">AI Features</a>
+        <a href="video-editing.html">Creative</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="page-hero">
+        <p class="eyebrow">AI portfolio layer</p>
+        <h1>AI Profile Helper</h1>
+        <p>
+          Click questions to quickly understand my resume, projects, AI work, and strengths.
+        </p>
+      </section>
+
+      <section class="section">
+        <article class="ai-panel ask-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Resume assistant</p>
+              <h2>Ask About Me</h2>
+            </div>
+            <span class="status-pill">Click a question</span>
+          </div>
+          <p class="panel-intro">
+            This section works like a mini resume assistant. It gives clear answers based on my CV and helps visitors understand my profile quickly.
+          </p>
+          <div class="quick-prompts" id="resume-prompts">
+            <button class="active" type="button" data-answer="summary">Who am I?</button>
+            <button type="button" data-answer="education">What is my education?</button>
+            <button type="button" data-answer="internship">What did I do as an AI intern?</button>
+            <button type="button" data-answer="rag">What RAG work have I done?</button>
+            <button type="button" data-answer="chatbot">What chatbot experience do I have?</button>
+            <button type="button" data-answer="metricmind">What is MetricMind?</button>
+            <button type="button" data-answer="campus">What is Campus Connect?</button>
+            <button type="button" data-answer="pmpml">What is PMPML Digital Transit Hub?</button>
+            <button type="button" data-answer="skills">What are my key skills?</button>
+            <button type="button" data-answer="certificates">Which certificates do I have?</button>
+            <button type="button" data-answer="achievements">What are my achievements?</button>
+            <button type="button" data-answer="creative">How does video editing help my profile?</button>
+            <button type="button" data-answer="whyhire">Why should someone consider me?</button>
+          </div>
+          <div class="assistant-output" id="resume-answer" aria-live="polite">
+            Aditi Prashant Shinde is an AI and Analytics enthusiast with hands-on experience in RAG pipelines, AI chatbots, data ingestion, analytics dashboards, LLMs, NLP, prompt engineering, and data visualization.
+          </div>
+        </article>
+      </section>
+
+      <section class="section">
+        <article class="ai-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Project speaking points</p>
+              <h2>Speaking Points</h2>
+            </div>
+            <span class="status-pill">Interview-ready</span>
+          </div>
+          <div class="project-switcher" id="project-switcher">
+            <button class="active" type="button" data-project="metricmind">MetricMind</button>
+            <button type="button" data-project="campus">Campus Connect</button>
+            <button type="button" data-project="pmpml">PMPML Transit Hub</button>
+          </div>
+          <ul class="talking-points" id="talking-points"></ul>
+        </article>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>AI features are built as lightweight frontend demos for portfolio storytelling.</p>
+      <a href="contact.html">Contact</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

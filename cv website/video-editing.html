@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Creative Skills | Aditi Shinde</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-mark">AS</span><span>Aditi P. Shinde</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">CV Details</a>
+        <a href="projects.html">Projects</a>
+        <a href="ai-features.html">AI Features</a>
+        <a class="active" href="video-editing.html">Creative</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="page-hero creative-hero">
+        <p class="eyebrow">Creative profile</p>
+        <h1>Creative Skills</h1>
+        <p>
+          This section adds the creative side of my profile: AI-generated videos created using prompts, editing, content presentation, Canva, Figma, social media strategy, and entrepreneurship.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="editing-showcase">
+          <article class="timeline-card">
+            <div class="timeline-bars" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <h2>Video Editing</h2>
+            <p>
+              Clean cuts, pacing, captions, transitions, music timing, audio cleanup, basic color correction, thumbnail support, and platform-ready exports for reels, explainers, project demos, and brand content.
+            </p>
+          </article>
+          <div class="details-grid">
+            <details class="cv-detail-card" open>
+              <summary>Short-form video editing</summary>
+              <p>Reels, highlights, social media edits, and quick project demo videos with clear story flow.</p>
+            </details>
+            <details class="cv-detail-card">
+              <summary>Captions and titles</summary>
+              <p>Readable captions, intro titles, lower thirds, and simple text animation for better understanding.</p>
+            </details>
+            <details class="cv-detail-card">
+              <summary>Sound and mood</summary>
+              <p>Music selection, audio balancing, background cleanup, and pacing matched to the content.</p>
+            </details>
+            <details class="cv-detail-card">
+              <summary>Design tools</summary>
+              <p>Canva and Figma for visual planning, thumbnails, content design, and website or brand presentation ideas.</p>
+            </details>
+            <details class="cv-detail-card">
+              <summary>Startup perfume brand</summary>
+              <p>Leading digital presence from 2026 by conceptualizing and designing the website, creating marketing strategies, and managing social media.</p>
+            </details>
+            <details class="cv-detail-card">
+              <summary>Dil Se Desserts</summary>
+              <p>Founded a home-based baking business, turning a personal passion into a small entrepreneurial brand.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">AI video work</p>
+          <h2>My AI-Generated Videos</h2>
+          <p>These videos are AI-generated using prompts. Click any video card to watch it with audio controls.</p>
+        </div>
+        <div class="video-gallery">
+          <button class="video-card" type="button" data-video-src="assets/video%201.mp4" data-video-title="AI-Generated Prompt Video 1">
+            <span class="play-mark">Play</span>
+            <strong>AI-Generated Prompt Video 1</strong>
+            <small>Created using AI prompts</small>
+          </button>
+          <button class="video-card" type="button" data-video-src="assets/video2.mp4" data-video-title="AI-Generated Prompt Video 2">
+            <span class="play-mark">Play</span>
+            <strong>AI-Generated Prompt Video 2</strong>
+            <small>Created using AI prompts</small>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div class="video-modal" id="video-modal" aria-hidden="true">
+      <div class="video-modal-panel" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+        <button class="video-close" type="button" id="video-close">Close</button>
+        <h2 id="video-modal-title">AI Creative Video</h2>
+        <video id="creative-video-player" controls playsinline></video>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p>Creative skills support technical communication.</p>
+      <a href="projects.html">Back to Projects</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
