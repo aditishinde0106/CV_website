@@ -40,15 +40,15 @@ if (contactForm && formStatus) {
     const contactLinks = {
       whatsapp: {
         url: `https://api.whatsapp.com/send?phone=917058941803&text=${encodedMessage}`,
-        status: "WhatsApp opened with your message ready to send.",
+        status: "Your WhatsApp message is ready to send.",
       },
       email: {
         url: `mailto:shindeaditi0106@gmail.com?subject=${encodeURIComponent("Portfolio contact")}&body=${encodedMessage}`,
-        status: "Email opened with your message ready to send.",
+        status: "Your email message is ready to send.",
       },
       linkedin: {
         url: "https://www.linkedin.com/in/aditi-shinde-b4384239a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-        status: "LinkedIn opened. You can send your message there.",
+        status: "LinkedIn opened so you can send your message.",
       },
     };
     const selectedLink = contactLinks[contactMethod] || contactLinks.whatsapp;
