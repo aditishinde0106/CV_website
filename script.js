@@ -47,7 +47,7 @@ if (contactForm && formStatus) {
         status: "Email opened with your message ready to send.",
       },
       linkedin: {
-        url: "https://www.linkedin.com/in/aditi-shinde-0106/",
+        url: "https://www.linkedin.com/in/aditi-shinde-b4384239a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
         status: "LinkedIn opened. You can send your message there.",
       },
     };
