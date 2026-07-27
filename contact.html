@@ -4,12 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact | Aditi Shinde</title>
-    <link rel="stylesheet" href="styles.css?v=20260725" />
+    <link rel="stylesheet" href="styles.css?v=20260727" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="index.html"><span class="brand-mark">AS</span><span>Aditi P. Shinde</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">CV Details</a>
@@ -35,37 +34,52 @@
             <a href="mailto:shindeaditi0106@gmail.com">shindeaditi0106@gmail.com</a>
           </div>
           <div class="contact-item">
-            <h3>Phone</h3>
-            <a href="tel:+917058941803">+91 7058941803</a>
+            <h3>WhatsApp</h3>
+            <a href="https://api.whatsapp.com/send?phone=917058941803" target="_blank" rel="noopener">+91 7058941803</a>
+          </div>
+          <div class="contact-item">
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/aditi-shinde-0106/" target="_blank" rel="noopener">linkedin.com/in/aditi-shinde-0106</a>
           </div>
           <div class="contact-item">
             <h3>Location</h3>
             <p>Nehru Nagar, Pune-18, Maharashtra</p>
           </div>
-          <div class="contact-item">
-            <h3>Future profile links</h3>
-            <p>LinkedIn, GitHub, hosted projects, and video portfolio links can be added here after sharing the URLs.</p>
-          </div>
         </article>
 
         <form class="contact-form" id="contact-form">
-          <h2>Prepare a Message</h2>
+          <h2>Choose How To Contact</h2>
           <label>
             Name
             <input type="text" name="name" placeholder="Your name" required />
           </label>
+          <fieldset class="contact-methods" aria-label="Preferred contact method">
+            <legend>Contact through</legend>
+            <label>
+              <input type="radio" name="contactMethod" value="whatsapp" checked />
+              <span>WhatsApp</span>
+            </label>
+            <label>
+              <input type="radio" name="contactMethod" value="email" />
+              <span>Email</span>
+            </label>
+            <label>
+              <input type="radio" name="contactMethod" value="linkedin" />
+              <span>LinkedIn</span>
+            </label>
+          </fieldset>
           <label>
             Message
             <textarea name="message" placeholder="Write a short message" required></textarea>
           </label>
-          <button class="button primary" type="submit">Send on WhatsApp</button>
+          <button class="button primary" type="submit">Open Selected Contact</button>
           <p id="form-status" class="form-status" role="status"></p>
         </form>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>This frontend form opens WhatsApp with your message ready to send.</p>
+      <p>This frontend form lets visitors choose WhatsApp, email, or LinkedIn.</p>
       <a href="index.html">Home</a>
     </footer>
     <script src="script.js"></script>

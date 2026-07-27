@@ -136,6 +136,54 @@ a {
   font-weight: 800;
 }
 
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.contact-methods legend {
+  grid-column: 1 / -1;
+  margin-bottom: 2px;
+  color: #d9eef7;
+  font-weight: 800;
+}
+
+.contact-methods label {
+  position: relative;
+  display: grid;
+  min-height: 48px;
+  place-items: center;
+  cursor: pointer;
+}
+
+.contact-methods input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-methods span {
+  display: grid;
+  width: 100%;
+  min-height: 48px;
+  place-items: center;
+  border: 1px solid rgba(125, 245, 255, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e8f7ff;
+  font-weight: 900;
+}
+
+.contact-methods input:checked + span {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #06101a;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
@@ -1116,7 +1164,7 @@ textarea {
 
   .brand {
     gap: 12px;
-    max-width: calc(100% - 104px);
+    max-width: 100%;
     font-size: 18px;
   }
 
@@ -1127,28 +1175,25 @@ textarea {
   }
 
   .nav-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    padding: 0 16px;
-    background: rgba(8, 18, 34, 0.72);
+    display: none;
   }
 
   .site-nav {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .site-nav.open {
     display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
   }
 
   .site-nav a {
+    flex: 0 0 auto;
     min-height: 44px;
     padding: 12px 14px;
+    white-space: nowrap;
   }
 
   .hero,
@@ -1285,6 +1330,10 @@ textarea {
 @media (max-width: 430px) {
   .brand {
     font-size: 16px;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr;
   }
 
   .hero-actions,

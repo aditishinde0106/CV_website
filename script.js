@@ -34,10 +34,26 @@ if (contactForm && formStatus) {
     const data = new FormData(contactForm);
     const name = data.get("name")?.toString().trim() || "Visitor";
     const message = data.get("message")?.toString().trim() || "";
-    const whatsappMessage = `Hello Aditi, my name is ${name}.\n\n${message}`;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=917058941803&text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(whatsappUrl, "_blank", "noopener");
-    formStatus.textContent = "WhatsApp opened with your message ready to send.";
+    const contactMethod = data.get("contactMethod")?.toString() || "whatsapp";
+    const preparedMessage = `Hello Aditi, my name is ${name}.\n\n${message}`;
+    const encodedMessage = encodeURIComponent(preparedMessage);
+    const contactLinks = {
+      whatsapp: {
+        url: `https://api.whatsapp.com/send?phone=917058941803&text=${encodedMessage}`,
+        status: "WhatsApp opened with your message ready to send.",
+      },
+      email: {
+        url: `mailto:shindeaditi0106@gmail.com?subject=${encodeURIComponent("Portfolio contact")}&body=${encodedMessage}`,
+        status: "Email opened with your message ready to send.",
+      },
+      linkedin: {
+        url: "https://www.linkedin.com/in/aditi-shinde-0106/",
+        status: "LinkedIn opened. You can send your message there.",
+      },
+    };
+    const selectedLink = contactLinks[contactMethod] || contactLinks.whatsapp;
+    window.open(selectedLink.url, "_blank", "noopener");
+    formStatus.textContent = selectedLink.status;
   });
 }
 
